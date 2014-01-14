@@ -1,0 +1,24 @@
+<ui:composition template="/WEB-INF/templates/system_template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="content">
+		<h:form id="form">
+
+			<p:messages id="messages" showDetail="true" autoUpdate="true"
+				closable="true" />
+
+			<p:fieldset styleClass="size_12 fieldset" legend="Consultar Usuários">
+				<div class="grid_2">
+					<p:commandButton id="btnIncluir"
+						action="#{usuarioBean.redirecionarCadastro}"
+						value="Incluir Usuário"
+						styleClass="size_2 commandButton orangeButton" ajax="false"/>
+				</div>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+</ui:composition>
